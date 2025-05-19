@@ -1,0 +1,149 @@
+{
+    "status": "success",
+    "verification": {
+        "id": "12df6045-3846-3e45-946a-14fa6136d78b",
+        "attemptId": "6cab5b0-c506-47a6-922d-6ae3b72ca172",
+        "vendorData": "12345678",
+        "endUserId": "a1b2c35d-e8f7-6d5e-3cd2-a1b2c35db3d4",
+        "status": "approved",
+        "code": 9001,
+        "reason": null,
+        "reasonCode": null,
+        "decisionTime": "2019-11-06T07:18:36.916Z",
+        "acceptanceTime": "2019-11-06T07:15:27.000Z",
+        "person": {
+            "firstName": "SARAH",
+            "lastName": "MORGAN",
+            "dateOfBirth": "1967-03-30",
+            "gender": null,
+            "nationality": null,
+            "idNumber": null,
+            "yearOfBirth": "1967",
+            "placeOfBirth": "MADRID",
+            "addresses": [
+                {
+                    "fullAddress": "1234 Ridge Road, Indiana, 56789 USA",
+                    "parsedAddress": {
+                        "city": null,
+                        "unit": null,
+                        "state": "Indiana",
+                        "street": "1234 Ridge Road",
+                        "country": "USA",
+                        "postcode": "56789",
+                        "houseNumber": "null"
+                    }
+                }
+            ],
+            "fullName": "SARAH MORGAN",
+            "occupation": "Engineer",
+            "employer": "Any Company LLC",
+            "foreignerStatus": "EXTRANJERO",
+            "extraNames": "NOM D'USAGE",
+            "title": "DR",
+            "pepSanctionMatch": null,
+            "citizenship": null,
+        },
+        "document": {
+            "number": "MORGA753116SM9IJ",
+            "validFrom": null,
+            "validUntil": "2022-04-20",
+            "type": "DRIVERS_LICENSE",
+            "country": "US",
+            "state": "NY",
+            "placeOfIssue": "ALBANY",
+            "firstIssue": "2015-03-21",
+            "issueNumber": "01",
+            "issuedBy": "ISSUER",
+            "remarks": "WORK PERMITTED",
+            "nfcValidated": true,
+            "residencePermitType": "C",
+            "portraitIsVisible": "true",
+            "signatureIsVisible": "true",
+            "specimen": {
+                "containsContactlessChip": false,
+                "firstIssuedDate": "2020-01-01",
+                "lastIssuedDate": "2021-01-02",
+                "nistVersion": "1.2.3",
+                "digitalDocument": true,
+                "nonStandardDrivingLicense": false,
+                "militaryDocument": false,
+                "temporaryEmergencyDocument": false,
+                "asylumRefugeeDocument": false,
+                "ICAOStandardizedDocument": false,
+                "notNationalIdCard": true,
+                "legalStatus": "primary",
+                "hasSecurityRisk": false
+            }
+        },
+        "additionalVerifiedData": {
+            "driversLicenseNumber": "1234569",
+            "driversLicenseCategory": {
+                "B": true
+            },
+            "driversLicenseCategoryFrom": {
+                "B": "2019-10-06"
+            },
+            "driversLicenseCategoryUntil": {
+                "B": "2025-10-05"
+            },
+            "driversLicenseCategories": [
+                "B",
+                "C",
+                "5",
+                "6"
+            ],
+            "estimatedAge": 32,
+            "estimatedGender": 0.613,
+            "processNumber": "12345678912 1234",
+            "cpfValidation": {
+                "status": "CPF is validated",
+                "cpfNumber": "123456789",
+                "name": "SARAH MORGAN",
+                "dateOfBirth": "1967-03-30",
+                "yearOfDeath": null
+            },
+            "ineBiometricRegistryValidation": {
+                "faceMatch": true,
+                "faceMatchPercentage": 89,
+                "responseStatus": "success"
+            },
+            "registryValidation": {
+                "countryRegistry": "CO",
+                "registryName": "resigo",
+                "fullNameSimilarity": 80,
+                "documentValid": true,
+                "personIsAlive": true
+            },
+            "proofOfAddress": {
+                "nameMatch": true,
+                "nameMatchPercentage": 100.00
+                "documentType": "UTILITY_BILL"
+            },
+        },
+        "riskScore": {
+            "score": 0.12
+        },
+        "riskLabels": [
+            {
+                "label": "document_integration_...",
+                "category": "document",
+                "sessionIds": [
+                    "5a2358e7-fd31-4fcb-a23f-4d76651ba68a"
+                ]
+            }
+        ],
+        "biometricAuthentication": {
+            "matchedSessionId": "d40edb60-6ae6-4475-be72-84b81669cce6",
+            "matchedSessionEndUserId": "a1b2c35d-e8f7-6d5e-3cd2-a1b2c35db3d4",
+            "matchedSessionVendorData": "User001",
+            "details": {
+                ...
+            }
+        },
+        "comments": []
+    },
+    "highRisk": false,
+    "technicalData": {
+        "ip": "186.153.67.122"
+    }
+}

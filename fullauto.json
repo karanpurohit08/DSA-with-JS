@@ -1,0 +1,54 @@
+{
+    "status": "success",
+    "eventType": "fullauto",
+    "sessionId": "1234567d-1ab2-34c5-bba7-a23gh58908er",
+    "attemptId": "12e3d456-9ea2-7821-12io-aabb4113bgtf",
+    "vendorData": null,
+    "version": "1.0.0",
+    "acceptanceTime": "2023-10-05T17:34:06.882846Z",
+    "time": "2023-10-05T17:33:22.449Z",
+    "data": {
+        "verification": {
+            "decisionScore": 0.96,
+            "decision": "approved",
+            "person": {
+                "firstName": {
+                    "confidenceCategory": "medium",
+                    "value": "ASHOK",
+                    "sources": [
+                        "MRZ",
+                        "VIZ"
+                    ]
+                },
+              ...
+            },
+            "document": {
+                "type": {
+                    "value": "id_card"
+                },
+                "country": {
+                    "value": "IN"
+                },
+                "number": {
+                    "confidenceCategory": "high",
+                    "value": "123abc456",
+                    "sources": [
+                        "MRZ",
+                        "VIZ"
+                    ]
+                },
+              ...
+            },
+            "insights": [
+                {
+                    "label": "xwz",
+                    "result": "yes",
+                    "category": "abc"
+                },
+                {
+                  ...
+                },
+            ]
+        },
+    }
+}
