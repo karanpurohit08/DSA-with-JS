@@ -172,3 +172,25 @@ function buyStocksForMaxPrice(arr) {
   return maxProfit;
 }
 // console.log(buyStocksForMaxPrice([7,1,5,3,6,4]))
+
+function majorityElement(arr) {
+  let ans = arr[0];
+  let count = 1;
+  for (let index = 0; index < arr.length; index++) {
+    if (count == 0) {
+      ans = arr[index];
+      count = 1;
+    } else if (arr[index] == ans) count++;
+    else count--;
+  }
+  return ans;
+}
+// console.log(majorityElement([2, 1, 2, 3, 3, 3]));
+
+//splice method-used to delete certain element from certain index
+//slice method- retuns the copy of an array
+
+// const arr = [1, 2, 3, 4, 5, 6];
+// const slice = arr.slice(2, 3);
+// console.log(slice, "slice");
+// console.log(arr, "arr");
