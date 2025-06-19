@@ -131,23 +131,67 @@ var cancellable = function (fn, args, t) {
     clearInterval(timer);
   };
 };
-const result = [];
-const fn = (x) => x * 5;
-const args = [2],
-  t = 100,
-  cancelTimeMs = 50;
-const start = performance.now();
+// const result = [];
+// const fn = (x) => x * 5;
+// const args = [2],
+//   t = 100,
+//   cancelTimeMs = 50;
+// const start = performance.now();
 
-const log = (...argsArr) => {
-  const diff = Math.floor(performance.now() - start);
-  result.push({ time: diff, returned: fn(...argsArr) });
+// const log = (...argsArr) => {
+//   const diff = Math.floor(performance.now() - start);
+//   result.push({ time: diff, returned: fn(...argsArr) });
+// };
+
+// const cancel = cancellable(log, args, t);
+
+// const maxT = Math.max(t, cancelTimeMs);
+// setTimeout(cancel, cancelTimeMs);
+
+// setTimeout(() => {
+//   console.log(result, "result"); // [{"time":20,"returned":10}]
+// }, maxT + 15);
+
+var timeLimit = (fn, t) => {
+  return async function (...args) {
+    const timeoutPromise = new Promise((_, reject) => {
+      setTimeout(() => reject("Time Limit Exceeded"), t);
+    });
+
+    // Race the original function against the timeout
+    return Promise.race([
+      fn(...args), // Execute the original function
+      timeoutPromise, // Timeout promise
+    ]);
+  };
 };
 
-const cancel = cancellable(log, args, t);
+const fn = async (n) => {
+  await new Promise((res) => setTimeout(res, 100));
+  return n * n;
+};
+const inputs = [5];
+const t = 150;
 
-const maxT = Math.max(t, cancelTimeMs);
-setTimeout(cancel, cancelTimeMs);
+const limited = timeLimit(fn, t);
+const start = performance.now();
+let result;
+try {
+  const res = await limited(...inputs);
+  result = { resolved: res, time: Math.floor(performance.now() - start) };
+} catch (err) {
+  result = { rejected: err, time: Math.floor(performance.now() - start) };
+}
+// console.log(result);
 
-setTimeout(() => {
-  console.log(result, "result"); // [{"time":20,"returned":10}]
-}, maxT + 15);
+setTimeout(function b() {
+  // console.log("called at 0th seconds");
+}, 0);
+
+const pr1 = new Promise((resolve, reject) => {
+  // resolve("It will be called in the micro task queue.");
+}).then(function b(value) {
+  console.log(value);
+});
+
+// console.log("called out side the setTimeout..");

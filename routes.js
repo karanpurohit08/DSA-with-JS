@@ -6,3 +6,6 @@ import "./practise/array.js";
 import "./practise/string.js";
 import "./practise/asyncProgramming.js";
 import "./practise/this.js";
+import "./practise/object.js";
+import "./practise/proxy.js";
+import "./practise/hardJsQue.js";

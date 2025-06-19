@@ -79,3 +79,16 @@ function TotalOfNumbersInArrayOfStringAndNumbers(array) {
 // console.log(
 //   TotalOfNumbersInArrayOfStringAndNumbers(["karan", 2, 3, "karan", 5])
 // );
+
+const counting = {};
+const countableString = "Hey i am here to stay for my own come back";
+
+for (const char of countableString) {
+  if (counting[char]) {
+    counting[char] += 1;
+  } else {
+    counting[char] = 1;
+  }
+}
+
+// console.log(counting, "counting");

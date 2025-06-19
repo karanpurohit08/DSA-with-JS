@@ -74,3 +74,4 @@ function trianglePatternWithoutBase(n) {
   }
 }
 // trianglePatternWithoutBase(5);
+
